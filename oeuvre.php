@@ -1,18 +1,14 @@
 <?php
     require 'header.php';
     require 'bdd.php';
+    require 'tools.php';
 
     // Si l'URL ne contient pas d'id, on redirige sur la page d'accueil
     if(empty($_GET['id'])) {
         header('Location: index.php');
     }
 
-    $db = connexion();
-    $oeuvresStatement = $db->prepare('SELECT * FROM oeuvres WHERE id = :id');
-    $oeuvresStatement->execute([
-        'id' => (int)$_GET['id']
-    ]);
-    $oeuvre = $oeuvresStatement->fetch();
+    $oeuvre = uneOeuvre((int)$_GET['id']);
 
     // Si aucune oeuvre trouvé, on redirige vers la page d'accueil
     if(is_null($oeuvre)) {
@@ -22,7 +18,7 @@
 
 <article id="detail-oeuvre">
     <div id="img-oeuvre">
-        <img src="<?= $oeuvre['image'] ?>" alt="<?= $oeuvre['titre'] ?>">
+        <img src="<?= simplifyImagePath($oeuvre['image']) ?>" alt="<?= $oeuvre['titre'] ?>">
     </div>
     <div id="contenu-oeuvre">
         <h1><?= $oeuvre['titre'] ?></h1>

@@ -1,14 +1,16 @@
 <?php
     require 'header.php';
     require 'bdd.php';
-    $db = connexion();
-    $oeuvres = $db->query('SELECT * FROM oeuvres ORDER BY id ASC');
+    require 'tools.php';
+    $oeuvres = toutesLesOeuvres();
 ?>
 <div id="liste-oeuvres">
     <?php foreach($oeuvres as $oeuvre): ?>
         <article class="oeuvre">
             <a href="oeuvre.php?id=<?= $oeuvre['id'] ?>">
-                <img src="<?= $oeuvre['image'] ?>" alt="<?= $oeuvre['titre'] ?>">
+                <?php
+                ?>
+                <img src="<?= simplifyImagePath($oeuvre['image']) ?>" alt="<?= $oeuvre['titre'] ?>">
                 <h2><?= $oeuvre['titre'] ?></h2>
                 <p class="description"><?= $oeuvre['artiste'] ?></p>
             </a>
