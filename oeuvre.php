@@ -11,7 +11,7 @@
     $oeuvre = uneOeuvre((int)$_GET['id']);
 
     // Si aucune oeuvre trouvé, on redirige vers la page d'accueil
-    if(is_null($oeuvre)) {
+    if(is_null($oeuvre) || !$oeuvre) {
         header('Location: index.php');
     }
 ?>
