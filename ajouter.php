@@ -3,15 +3,15 @@
 <form action="traitement.php" method="POST">
     <div class="champ-formulaire">
         <label for="titre">Titre de l'œuvre</label>
-        <input type="text" name="titre" id="titre">
+        <input type="text" name="titre" id="titre" maxlength="255">
     </div>
     <div class="champ-formulaire">
         <label for="artiste">Auteur de l'œuvre</label>
-        <input type="text" name="artiste" id="artiste">
+        <input type="text" name="artiste" id="artiste" maxlength="255">
     </div>
     <div class="champ-formulaire">
         <label for="image">URL de l'image</label>
-        <input type="url" name="image" id="image">
+        <input type="url" name="image" id="image" maxlength="255">
     </div>
     <div class="champ-formulaire">
         <label for="description">Description</label>

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
-html, body {
+html,
+body {
     margin: 0;
 }
 
@@ -61,7 +62,8 @@ footer {
     width: 100%;
 }
 
-.oeuvre h2, #detail-oeuvre h1 {
+.oeuvre h2,
+#detail-oeuvre h1 {
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 0;
@@ -69,7 +71,8 @@ footer {
     font-size: 30px;
 }
 
-.oeuvre .description, #detail-oeuvre .description {
+.oeuvre .description,
+#detail-oeuvre .description {
     font-style: italic;
     margin-top: 0;
     font-size: 12px;
@@ -79,7 +82,7 @@ footer {
 #detail-oeuvre {
     display: flex;
     flex-wrap: wrap;
-    align-items: end;
+    align-items: start;
     margin-bottom: 100px;
     margin-top: 75px;
     font-size: 14px;
@@ -114,7 +117,8 @@ form {
     margin-bottom: 25px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     padding: 7px;
 }
 
