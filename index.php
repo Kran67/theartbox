@@ -1,7 +1,6 @@
 <?php
     require 'header.php';
     require 'bdd.php';
-    require 'tools.php';
     $oeuvres = toutesLesOeuvres();
 ?>
 <div id="liste-oeuvres">
