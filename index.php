@@ -10,7 +10,7 @@
             <a href="oeuvre.php?id=<?= $oeuvre['id'] ?>">
                 <?php
                 ?>
-                <img src="<?= simplifyImagePath($oeuvre['image']) ?>" alt="<?= $oeuvre['titre'] ?>">
+                <img src="<?= $oeuvre['image'] ?>" alt="<?= $oeuvre['titre'] ?>">
                 <h2><?= $oeuvre['titre'] ?></h2>
                 <p class="description"><?= $oeuvre['artiste'] ?></p>
             </a>

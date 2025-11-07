@@ -18,7 +18,7 @@
 
 <article id="detail-oeuvre">
     <div id="img-oeuvre">
-        <img src="<?= simplifyImagePath($oeuvre['image']) ?>" alt="<?= $oeuvre['titre'] ?>">
+        <img src="<?= $oeuvre['image'] ?>" alt="<?= $oeuvre['titre'] ?>">
     </div>
     <div id="contenu-oeuvre">
         <h1><?= $oeuvre['titre'] ?></h1>
